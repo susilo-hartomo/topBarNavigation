@@ -1,0 +1,12 @@
+{
+  "name": "topBarNavigation",
+  "displayName": "topBarNavigation",
+  "expo": {
+    "name": "topBarNavigation",
+    "slug": "topBarNavigation",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
