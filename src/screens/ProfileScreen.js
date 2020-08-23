@@ -3,7 +3,7 @@ import { View, Text } from 'react-native'
 
 export default SettingsScreen = () => {
     return (
-        <View>
+        <View style={{ flex: 1, backgroundColor: 'green', justifyContent: 'center', alignItems: 'center' }}>
             <Text>Profile screen</Text>
         </View>
     )

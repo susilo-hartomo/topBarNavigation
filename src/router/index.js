@@ -1,8 +1,6 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
 
-import TopBarNavigation from './TopBarNavigation'
-
 // Screen
 import HomeScreen from '../screens/HomeScreen'
 

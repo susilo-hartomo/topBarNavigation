@@ -5,7 +5,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import HomeScreen from '../screens/HomeScreen'
 import SettingsScreen from '../screens/SettingsScreen'
 import ProfileScreen from '../screens/ProfileScreen'
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 
 export default function TopBarNavigation() {
     const Tab = createMaterialTopTabNavigator();
@@ -14,22 +14,47 @@ export default function TopBarNavigation() {
             initialRouteName="Feed"
             tabBarOptions={{
                 activeTintColor: '#e91e63',
-                labelStyle: { fontSize: 12 },
-                style: { backgroundColor: 'powderblue' },
+                inactiveTintColor: 'grey',
+                labelStyle: { fontSize: 12, },
+                scrollEnabled: true,
+                indicatorContainerStyle: { display: 'none' },
+                tabStyle: { width: 100 }
             }}
         >
-            {/* <Tab.Screen
-                name="Feed"
-                component={HomeScreen}
-                options={{ tabBarLabel: 'Home' }}
-            /> */}
+            <Tab.Screen
+                name="Profile"
+                component={ProfileScreen}
+                options={{
+                    tabBarLabel: 'Profile',
+                    tabBarIcon: ({ focused, color }) => {
+                        focused && <View style={{ backgroundColor: '#b1b1b1' }}>
+                            <Text style={{ color }}>OK</Text>
+                        </View>
+                    }
+                }}
+            />
             <Tab.Screen
                 name="Notifications"
                 component={SettingsScreen}
-                options={{ tabBarLabel: 'Updates' }}
+                options={{ tabBarLabel: 'Updates', }}
             />
             <Tab.Screen
-                name="Profile"
+                name="Profile1"
+                component={ProfileScreen}
+                options={{ tabBarLabel: 'Profile' }}
+            />
+            <Tab.Screen
+                name="Profile2"
+                component={ProfileScreen}
+                options={{ tabBarLabel: 'Profile' }}
+            />
+            <Tab.Screen
+                name="Profile3"
+                component={ProfileScreen}
+                options={{ tabBarLabel: 'Profile' }}
+            />
+            <Tab.Screen
+                name="Profile4"
                 component={ProfileScreen}
                 options={{ tabBarLabel: 'Profile' }}
             />
